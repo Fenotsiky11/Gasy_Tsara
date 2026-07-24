@@ -1,0 +1,84 @@
+[gd_scene format=4 uid="uid://dialogue_box_scene"]
+
+[ext_resource type="Script" path="res://dialogue_box.gd" id="1_dlgbox"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panneau"]
+bg_color = Color(0.08, 0.06, 0.04, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6, 0.45, 0.2, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+content_margin_left = 16.0
+content_margin_top = 12.0
+content_margin_right = 16.0
+content_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_locuteur"]
+bg_color = Color(0.35, 0.22, 0.05, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7, 0.5, 0.1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 8.0
+content_margin_top = 2.0
+content_margin_right = 8.0
+content_margin_bottom = 2.0
+
+[node name="DialogueBox" type="CanvasLayer" script=ExtResource("1_dlgbox")]
+layer = 10
+
+[node name="Panneau" type="PanelContainer" parent="."]
+visible = false
+anchors_preset = 12
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -160.0
+offset_right = -20.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panneau")
+
+[node name="VBox" type="VBoxContainer" parent="Panneau"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LabelLocuteur" type="Label" parent="Panneau/VBox"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_locuteur")
+theme_override_colors/font_color = Color(1.0, 0.82, 0.3, 1)
+theme_override_font_sizes/font_size = 14
+text = "Gardien"
+size_flags_horizontal = 0
+
+[node name="LabelTexte" type="RichTextLabel" parent="Panneau/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 80)
+theme_override_colors/default_color = Color(0.95, 0.92, 0.85, 1)
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 3
+text = ""
+
+[node name="Indicateur" type="Label" parent="Panneau/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.9, 0.7, 0.9)
+theme_override_font_sizes/font_size = 12
+text = "[ E ] Continuer"
+horizontal_alignment = 2
+visible = false

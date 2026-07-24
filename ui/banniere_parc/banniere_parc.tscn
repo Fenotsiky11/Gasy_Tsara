@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://banniere_parc"]
+
+[ext_resource type="Script" path="res://ui/banniere_parc/banniere_parc.gd" id="1_script"]
+
+[node name="BanniereParc" type="PanelContainer"]
+anchor_right = 1.0
+offset_bottom = 42
+grow_horizontal = 2
+script = ExtResource("1_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left   = 10
+theme_override_constants/margin_right  = 10
+theme_override_constants/margin_top    = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="InfoZone" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NomParc" type="Label" parent="MarginContainer/HBoxContainer/InfoZone"]
+layout_mode = 2
+text = "Parc National de la Montagne d'Ambre"
+
+[node name="SousTitre" type="Label" parent="MarginContainer/HBoxContainer/InfoZone"]
+layout_mode = 2
+text = "Forêt tropicale humide du Nord · 18 200 ha · Cascades et lacs de cratère"
+
+[node name="Raccourcis" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+horizontal_alignment = 2
+text = "[E] Scanner   [A] Pokédex   [Échap] → Carte des parcs"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ccjksl2dhpjsi"]
+
+[ext_resource type="Texture2D" uid="uid://chdg0bi3mksjx" path="res://biblio/icon_blanc.tres" id="1_vtw7d"]
+[ext_resource type="Script" uid="uid://ecdj2t4ekgc7" path="res://Script/item_data.gd" id="2_xa4ua"]
+
+[resource]
+script = ExtResource("2_xa4ua")
+id = &"Angraecum"
+nom_affiche = "Angraecum"
+type = 4
+description = "Aussi appelée 'Orchidée de Darwin', cette fleur blanche en forme d'étoile possède un long éperon. Elle dégage un parfum intense la nuit pour attirer un papillon unique qui est le seul à pouvoir la polliniser."
+icone = ExtResource("1_vtw7d")
+metadata/_custom_type_script = "uid://ecdj2t4ekgc7"

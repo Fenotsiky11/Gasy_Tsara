@@ -1,0 +1,219 @@
+[gd_scene format=4 uid="uid://maison_gardien_scene"]
+
+; ──────────────────────────────────────────────────────────────
+; maison_gardien.tscn — Poste de garde du Parc National
+;
+; Petit bâtiment décoratif construit par des Node2D + Polygon2D
+; dans le style pixel-art du jeu (tons bois, pierre, toiture rouge).
+;
+; AMÉLIORATIONS de cette version :
+;   • Cheminee   : petite souche de cheminée sur le toit, d'où
+;                  s'échappent des bouffées de fumée animées
+;                  (voir maison_gardien.gd).
+;   • Lanterne   : lampe à l'entrée qui scintille doucement,
+;                  visible de loin dans le parc.
+;   • Drapeau    : fanion vert/or (couleurs du corps des gardiens)
+;                  qui ondule au sommet du toit.
+;   • Panneau    : pancarte en bois indiquant "→ Parc National"
+;                  pour orienter le joueur une fois la porte ouverte.
+;
+; Structure :
+;   MaisonGardien (Node2D, script maison_gardien.gd)
+;   ├── Corps          ← murs en Polygon2D
+;   ├── Toiture        ← toit en Polygon2D
+;   ├── Faitiere       ← bande faîtière
+;   ├── Cheminee       ← souche de cheminée (fumée animée par script)
+;   ├── Porte          ← détail porte en Polygon2D
+;   ├── Fenetre        ← détail fenêtre
+;   ├── Lanterne       ← lampe scintillante près de la porte
+;   ├── Drapeau        ← mât + fanion ondulant
+;   ├── Panneau        ← pancarte directionnelle vers le parc
+;   ├── Enseigne       ← Label "Poste de Garde"
+;   └── StaticBody2D   ← collision physique
+;       └── CollisionShape2D
+; ──────────────────────────────────────────────────────────────
+
+[ext_resource type="Script" path="res://maison_gardien.gd" id="1_maison"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_maison"]
+size = Vector2(96, 80)
+
+; ── Polygones des éléments visuels ────────────────────────────
+
+[sub_resource type="Gradient" id="Gradient_mur"]
+colors = PackedColorArray(0.58, 0.47, 0.3, 1, 0.48, 0.37, 0.22, 1)
+
+; Corps principal de la maison (rectangle)
+[node name="MaisonGardien" type="Node2D" script=ExtResource("1_maison")]
+z_index = 2
+
+; ── Murs ──────────────────────────────────────────────────────
+[node name="Corps" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-48, 0, 48, 0, 48, 72, -48, 72)
+color = Color(0.58, 0.47, 0.30, 1)
+
+; Liseré pierre sur les bords
+[node name="CorpsContour" type="Line2D" parent="."]
+points = PackedVector2Array(-48, 0, 48, 0, 48, 72, -48, 72, -48, 0)
+width = 2.5
+default_color = Color(0.38, 0.30, 0.18, 1)
+
+; ── Toiture ───────────────────────────────────────────────────
+[node name="Toiture" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-56, 0, 56, 0, 36, -32, -36, -32)
+color = Color(0.62, 0.18, 0.12, 1)
+
+[node name="ToitureContour" type="Line2D" parent="."]
+points = PackedVector2Array(-56, 0, 56, 0, 36, -32, -36, -32, -56, 0)
+width = 2.0
+default_color = Color(0.35, 0.08, 0.06, 1)
+
+; ── Bande faîtière ────────────────────────────────────────────
+[node name="Faitiere" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-40, -32, 40, -32, 40, -28, -40, -28)
+color = Color(0.38, 0.10, 0.08, 1)
+
+; ── Cheminée (nouvelle) ────────────────────────────────────────
+[node name="Cheminee" type="Node2D" parent="."]
+position = Vector2(20, -32)
+
+[node name="Corps" type="Polygon2D" parent="Cheminee"]
+polygon = PackedVector2Array(-7, -22, 7, -22, 7, 0, -7, 0)
+color = Color(0.45, 0.42, 0.40, 1)
+
+[node name="Contour" type="Line2D" parent="Cheminee"]
+points = PackedVector2Array(-7, -22, 7, -22, 7, 0, -7, 0, -7, -22)
+width = 1.5
+default_color = Color(0.28, 0.26, 0.24, 1)
+
+[node name="Chapeau" type="Polygon2D" parent="Cheminee"]
+position = Vector2(0, -22)
+polygon = PackedVector2Array(-9, -3, 9, -3, 9, 0, -9, 0)
+color = Color(0.30, 0.28, 0.26, 1)
+
+; ── Porte ─────────────────────────────────────────────────────
+[node name="Porte" type="Polygon2D" parent="."]
+position = Vector2(0, 72)
+polygon = PackedVector2Array(-14, -40, 14, -40, 14, 0, -14, 0)
+color = Color(0.35, 0.22, 0.10, 1)
+
+[node name="PorteContour" type="Line2D" parent="Porte"]
+points = PackedVector2Array(-14, -40, 14, -40, 14, 0, -14, 0, -14, -40)
+width = 1.5
+default_color = Color(0.20, 0.12, 0.04, 1)
+
+; Poignée
+[node name="Poignee" type="Polygon2D" parent="Porte"]
+position = Vector2(10, -18)
+polygon = PackedVector2Array(-2, -4, 2, -4, 2, 4, -2, 4)
+color = Color(0.75, 0.60, 0.20, 1)
+
+; ── Fenêtre ───────────────────────────────────────────────────
+[node name="Fenetre" type="Polygon2D" parent="."]
+position = Vector2(-22, 30)
+polygon = PackedVector2Array(-10, -12, 10, -12, 10, 12, -10, 12)
+color = Color(0.55, 0.75, 0.90, 0.85)
+
+[node name="FenetreContour" type="Line2D" parent="Fenetre"]
+points = PackedVector2Array(-10, -12, 10, -12, 10, 12, -10, 12, -10, -12)
+width = 1.5
+default_color = Color(0.35, 0.22, 0.10, 1)
+
+; Croisillon de fenêtre
+[node name="CroisillonH" type="Line2D" parent="Fenetre"]
+points = PackedVector2Array(-10, 0, 10, 0)
+width = 1.0
+default_color = Color(0.35, 0.22, 0.10, 1)
+
+[node name="CroisillonV" type="Line2D" parent="Fenetre"]
+points = PackedVector2Array(0, -12, 0, 12)
+width = 1.0
+default_color = Color(0.35, 0.22, 0.10, 1)
+
+; ── Lanterne (nouvelle) ─────────────────────────────────────────
+[node name="Lanterne" type="Node2D" parent="."]
+position = Vector2(36, 40)
+
+[node name="Bras" type="Line2D" parent="Lanterne"]
+points = PackedVector2Array(-12, 0, 0, 0)
+width = 2.0
+default_color = Color(0.30, 0.20, 0.08, 1)
+
+[node name="Boitier" type="Polygon2D" parent="Lanterne"]
+polygon = PackedVector2Array(-4, -6, 4, -6, 4, 6, -4, 6)
+color = Color(0.20, 0.15, 0.08, 1)
+
+; Halo large, très transparent, pour un effet de lumière douce
+[node name="Halo" type="Polygon2D" parent="Lanterne"]
+polygon = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+color = Color(1.0, 0.85, 0.45, 0.20)
+
+; Flamme / ampoule
+[node name="Lumiere" type="Polygon2D" parent="Lanterne"]
+polygon = PackedVector2Array(-3, -4, 3, -4, 3, 4, -3, 4)
+color = Color(1.0, 0.85, 0.35, 0.9)
+
+; ── Drapeau (nouveau) ────────────────────────────────────────────
+[node name="Mat" type="Line2D" parent="."]
+points = PackedVector2Array(0, -32, 0, -64)
+width = 2.0
+default_color = Color(0.35, 0.23, 0.06, 1)
+
+[node name="Drapeau" type="Node2D" parent="."]
+position = Vector2(0, -64)
+
+[node name="Tissu" type="Polygon2D" parent="Drapeau"]
+polygon = PackedVector2Array(0, -6, 18, -2, 18, 2, 0, 6)
+color = Color(0.23, 0.48, 0.23, 1)
+
+[node name="Liseret" type="Line2D" parent="Drapeau"]
+points = PackedVector2Array(0, -6, 18, -2, 18, 2, 0, 6, 0, -6)
+width = 1.0
+default_color = Color(0.78, 0.64, 0.16, 1)
+
+; ── Panneau directionnel (nouveau) ────────────────────────────
+[node name="Panneau" type="Node2D" parent="."]
+position = Vector2(72, 48)
+
+[node name="Poteau" type="Polygon2D" parent="Panneau"]
+polygon = PackedVector2Array(-3, -34, 3, -34, 3, 24, -3, 24)
+color = Color(0.35, 0.23, 0.06, 1)
+
+[node name="Pancarte" type="Polygon2D" parent="Panneau"]
+position = Vector2(0, -30)
+polygon = PackedVector2Array(-26, -10, 26, -10, 26, 10, -26, 10)
+color = Color(0.58, 0.44, 0.26, 1)
+
+[node name="PancarteContour" type="Line2D" parent="Panneau/Pancarte"]
+points = PackedVector2Array(-26, -10, 26, -10, 26, 10, -26, 10, -26, -10)
+width = 1.5
+default_color = Color(0.30, 0.20, 0.08, 1)
+
+[node name="LabelPancarte" type="Label" parent="Panneau/Pancarte"]
+offset_left = -26.0
+offset_top = -10.0
+offset_right = 26.0
+offset_bottom = 10.0
+theme_override_colors/font_color = Color(1.0, 0.95, 0.8, 1)
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "→ Parc National"
+
+; ── Enseigne ──────────────────────────────────────────────────
+[node name="Enseigne" type="Label" parent="."]
+position = Vector2(-48, -56)
+custom_minimum_size = Vector2(96, 0)
+theme_override_colors/font_color = Color(1.0, 0.9, 0.6, 1)
+theme_override_font_sizes/font_size = 9
+text = "🏕 Poste de Garde"
+horizontal_alignment = 1
+
+; ── Collision physique ────────────────────────────────────────
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 1
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 36)
+shape = SubResource("RectangleShape2D_maison")

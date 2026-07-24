@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dq2nwwfupg1ga"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_porte"]
+size = Vector2(120, 140)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_message"]
+radius = 100.0
+
+[node name="PorteEntree" type="Node2D" unique_id=805032660]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1246547108]
+scale = Vector2(1.5, 1.5)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1892039394]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=933795548]
+visible = false
+shape = SubResource("RectangleShape2D_porte")
+
+[node name="ZoneMessage" type="Area2D" parent="." unique_id=1785721791]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneMessage" unique_id=161065053]
+shape = SubResource("CircleShape2D_message")
+
+[node name="LabelMessage" type="Label" parent="ZoneMessage" unique_id=1761854738]
+visible = false
+z_index = 5
+offset_left = -80.0
+offset_top = -110.0
+offset_right = 80.0
+offset_bottom = -90.0
+theme_override_colors/font_color = Color(1, 0.9, 0.5, 1)
+theme_override_font_sizes/font_size = 12
+text = "🔒 Parlez au gardien pour entrer"
+horizontal_alignment = 1

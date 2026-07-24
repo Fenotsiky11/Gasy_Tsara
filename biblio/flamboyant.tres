@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bcvvsvsesglqw"]
+
+[ext_resource type="Script" uid="uid://ecdj2t4ekgc7" path="res://Script/item_data.gd" id="1_3a65r"]
+[ext_resource type="Texture2D" uid="uid://dverwwmmqcxw2" path="res://biblio/sans_fruit.tres" id="1_qdkbl"]
+
+[resource]
+script = ExtResource("1_3a65r")
+id = &"Flamboyant"
+nom_affiche = "Flamboyant"
+type = 4
+description = "Originaire de l'ouest de Madagascar, cet arbre est célèbre pour ses fleurs rouge orangé éclatantes. On l'appelle 'l'arbre de feu'. Il fleurit généralement entre novembre et janvier, annonçant l'arrivée de l'été malgache."
+icone = ExtResource("1_qdkbl")
+metadata/_custom_type_script = "uid://ecdj2t4ekgc7"

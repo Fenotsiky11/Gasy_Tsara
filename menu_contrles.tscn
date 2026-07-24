@@ -1,0 +1,35 @@
+[gd_scene format=4 uid="uid://menu_contrles_scene"]
+
+[ext_resource type="Script" uid="uid://cjdi2ipk0djp3" path="res://menu_contrles.gd" id="1_script"]
+
+[node name="menu_contrles" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_script")
+
+[node name="LabelInfo" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="BtnHaut" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="BtnBas" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="BtnGauche" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="BtnDroite" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
