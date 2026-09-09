@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://d0o8nd6n3gd47"]
+
+[ext_resource type="Script" uid="uid://cqposfpl3j4dq" path="res://Script/SplashScreen.gd" id="1_6nf6n"]
+
+[node name="SplashScreen" type="CanvasLayer" unique_id=1092970505]
+script = ExtResource("1_6nf6n")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1897186759]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="." unique_id=177884308]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=555922004]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1127191798]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Control" unique_id=1313961014]
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="Label" type="Label" parent="Control" unique_id=1896086145]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
