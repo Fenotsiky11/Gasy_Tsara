@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bekuvfjtkjkpb"]
+
+[ext_resource type="Script" uid="uid://c52xdki4vhu35" path="res://scenes/ui/video_overlay.gd" id="1_qhhtu"]
+[ext_resource type="VideoStream" uid="uid://cftpxgguyyn26" path="res://Video/manguier_demo.ogv" id="2_uc3yt"]
+
+[node name="VideoOverlay" type="CanvasLayer" unique_id=416083599]
+layer = 20
+script = ExtResource("1_qhhtu")
+
+[node name="Fond" type="Control" parent="." unique_id=378978606]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="ColorRect" type="ColorRect" parent="Fond" unique_id=57208786]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.9)
+
+[node name="Lecteur" type="VideoStreamPlayer" parent="Fond" unique_id=827970136]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+audio_track = 15
+stream = ExtResource("2_uc3yt")
+autoplay = true
+expand = true
+
+[node name="BoutonFermer" type="Button" parent="Fond" unique_id=1288194619]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -48.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = 48.0
+grow_horizontal = 0
+text = "X"

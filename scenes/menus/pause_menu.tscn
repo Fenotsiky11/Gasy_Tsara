@@ -1,0 +1,901 @@
+[gd_scene format=3 uid="uid://btwscxuda7ifs"]
+
+[ext_resource type="Script" uid="uid://bhuvvrj5sy5tg" path="res://scripts/menus/pause_menu.gd" id="1_pause"]
+[ext_resource type="Texture2D" uid="uid://bej7ffpis50lq" path="res://assets/icons/france.png" id="2_france"]
+[ext_resource type="Texture2D" uid="uid://bc055jwjk10gd" path="res://assets/icons/madagascar.png" id="3_madagascar"]
+[ext_resource type="Texture2D" uid="uid://qnfxcr6l4mhg" path="res://assets/icons/united-kingdom.png" id="4_uk"]
+[ext_resource type="FontFile" uid="uid://byptthbnva5ry" path="res://fonts/Carlito-Bold.ttf" id="5_font"]
+[ext_resource type="FontFile" uid="uid://bpooorarigrqj" path="res://fonts/Noto_Emoji/NotoEmoji-VariableFont_wght.ttf" id="6_emoji"]
+
+[sub_resource type="StyleBoxFlat" id="SB_panneau"]
+bg_color = Color(0.055, 0.13, 0.065, 0.97)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35, 0.65, 0.2, 0.8)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 12
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="SB_badge"]
+bg_color = Color(0.15, 0.35, 0.1, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5, 0.82, 0.28, 0.7)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="SB_sep"]
+bg_color = Color(0.35, 0.65, 0.2, 0.35)
+
+[sub_resource type="StyleBoxFlat" id="SB_btn_n"]
+bg_color = Color(0.1, 0.24, 0.1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35, 0.65, 0.2, 0.5)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_btn_p"]
+bg_color = Color(0.07, 0.16, 0.07, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35, 0.65, 0.2, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_btn_h"]
+bg_color = Color(0.17, 0.4, 0.12, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.55, 0.88, 0.3, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_orange_n"]
+bg_color = Color(0.28, 0.15, 0.02, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.7, 0.45, 0.1, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_orange_p"]
+bg_color = Color(0.18, 0.09, 0.01, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.55, 0.15, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_orange_h"]
+bg_color = Color(0.5, 0.28, 0.04, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.72, 0.22, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_quit_n"]
+bg_color = Color(0.3, 0.07, 0.04, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.65, 0.25, 0.15, 0.6)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_quit_p"]
+bg_color = Color(0.18, 0.04, 0.02, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9, 0.38, 0.22, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_quit_h"]
+bg_color = Color(0.55, 0.1, 0.05, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9, 0.38, 0.22, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_param_bg"]
+bg_color = Color(0.04, 0.1, 0.07, 0.97)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.45, 0.85, 0.6, 0.3)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 30
+shadow_offset = Vector2(0, 8)
+
+[sub_resource type="StyleBoxFlat" id="SB_fermer_n"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.88, 0.4, 0.4, 0.5)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_fermer_h"]
+bg_color = Color(0.8, 0.18, 0.18, 0.18)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.55, 0.55, 0.85)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_sep2"]
+content_margin_top = 1.0
+content_margin_bottom = 1.0
+bg_color = Color(0.4, 0.85, 0.55, 0.25)
+
+[sub_resource type="StyleBoxFlat" id="SB_section"]
+bg_color = Color(0.08, 0.18, 0.12, 0.5)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35, 0.75, 0.5, 0.2)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="SB_lang_n"]
+bg_color = Color(0, 0, 0, 0)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.55, 0.88, 0.65, 0.35)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_lang_h"]
+bg_color = Color(0.25, 0.72, 0.38, 0.2)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.55, 1, 0.7, 0.7)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="SB_ctrl_n"]
+bg_color = Color(0.08, 0.16, 0.11, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.45, 0.8, 0.58, 0.28)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="SB_ctrl_h"]
+bg_color = Color(0.18, 0.45, 0.28, 0.45)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.55, 0.95, 0.68, 0.65)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="SB_reset_n"]
+bg_color = Color(0.12, 0.18, 0.22, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.4, 0.6, 0.75, 0.5)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="SB_reset_h"]
+bg_color = Color(0.2, 0.32, 0.45, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.55, 0.8, 1, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="SB_save_n"]
+bg_color = Color(0.08, 0.28, 0.12, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.75, 0.4, 0.6)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="SB_save_h"]
+bg_color = Color(0.14, 0.5, 0.22, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.45, 1, 0.55, 0.9)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1857636754]
+layer = 10
+script = ExtResource("1_pause")
+
+[node name="FondAssombri" type="ColorRect" parent="." unique_id=1029414740]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.65)
+
+[node name="PanneauPause" type="PanelContainer" parent="." unique_id=870179361]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -220.0
+offset_right = 175.0
+offset_bottom = 220.0
+theme_override_styles/panel = SubResource("SB_panneau")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanneauPause" unique_id=1595138743]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Header" type="MarginContainer" parent="PanneauPause/VBoxContainer" unique_id=798057799]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 12
+
+[node name="HeaderBox" type="VBoxContainer" parent="PanneauPause/VBoxContainer/Header" unique_id=29901413]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="BadgeTitre" type="PanelContainer" parent="PanneauPause/VBoxContainer/Header/HeaderBox" unique_id=67988259]
+layout_mode = 2
+theme_override_styles/panel = SubResource("SB_badge")
+
+[node name="MarginBadge" type="MarginContainer" parent="PanneauPause/VBoxContainer/Header/HeaderBox/BadgeTitre" unique_id=507823313]
+layout_mode = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 18
+theme_override_constants/margin_bottom = 6
+
+[node name="Titre" type="Label" parent="PanneauPause/VBoxContainer/Header/HeaderBox/BadgeTitre/MarginBadge" unique_id=1304218647]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.97, 0.45, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 24
+text = "🌿  PAUSE  🌿"
+horizontal_alignment = 1
+
+[node name="SousTitre" type="Label" parent="PanneauPause/VBoxContainer/Header/HeaderBox" unique_id=592670128]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.75, 0.32, 0.75)
+theme_override_font_sizes/font_size = 10
+text = "Exploration Biodiversité · Madagascar"
+horizontal_alignment = 1
+
+[node name="Separateur" type="PanelContainer" parent="PanneauPause/VBoxContainer" unique_id=784866355]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+theme_override_styles/panel = SubResource("SB_sep")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanneauPause/VBoxContainer" unique_id=1612456268]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 16
+
+[node name="BoutonsBox" type="VBoxContainer" parent="PanneauPause/VBoxContainer/MarginContainer" unique_id=2106736634]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BoutonReprendre" type="Button" parent="PanneauPause/VBoxContainer/MarginContainer/BoutonsBox" unique_id=354805677]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 1, 0.75, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0.88, 1)
+theme_override_colors/font_pressed_color = Color(0.7, 0.9, 0.6, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.88, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("SB_btn_n")
+theme_override_styles/pressed = SubResource("SB_btn_p")
+theme_override_styles/hover = SubResource("SB_btn_h")
+theme_override_styles/disabled = SubResource("SB_btn_n")
+theme_override_styles/focus = SubResource("SB_btn_h")
+text = "▶   Reprendre l'exploration"
+
+[node name="BoutonRecommencer" type="Button" parent="PanneauPause/VBoxContainer/MarginContainer/BoutonsBox" unique_id=1772389812]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.88, 0.55, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0.75, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.75, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("SB_orange_n")
+theme_override_styles/pressed = SubResource("SB_orange_p")
+theme_override_styles/hover = SubResource("SB_orange_h")
+theme_override_styles/disabled = SubResource("SB_orange_n")
+theme_override_styles/focus = SubResource("SB_orange_h")
+text = "🔄   Recommencer"
+
+[node name="BoutonParametres" type="Button" parent="PanneauPause/VBoxContainer/MarginContainer/BoutonsBox" unique_id=378177938]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 1, 0.75, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 0.88, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.88, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("SB_btn_n")
+theme_override_styles/pressed = SubResource("SB_btn_p")
+theme_override_styles/hover = SubResource("SB_btn_h")
+theme_override_styles/disabled = SubResource("SB_btn_n")
+theme_override_styles/focus = SubResource("SB_btn_h")
+text = "⚙   Paramètres"
+
+[node name="Spacer" type="Control" parent="PanneauPause/VBoxContainer/MarginContainer/BoutonsBox" unique_id=1832363850]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+
+[node name="BoutonMenuPrincipal" type="Button" parent="PanneauPause/VBoxContainer/MarginContainer/BoutonsBox" unique_id=614205063]
+custom_minimum_size = Vector2(0, 44)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0.72, 1)
+theme_override_colors/font_focus_color = Color(1, 0.9, 0.82, 1)
+theme_override_colors/font_hover_color = Color(1, 0.9, 0.82, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("SB_quit_n")
+theme_override_styles/pressed = SubResource("SB_quit_p")
+theme_override_styles/hover = SubResource("SB_quit_h")
+theme_override_styles/disabled = SubResource("SB_quit_n")
+theme_override_styles/focus = SubResource("SB_quit_h")
+text = "🏠   Menu principal"
+
+[node name="Separateur2" type="PanelContainer" parent="PanneauPause/VBoxContainer" unique_id=1072275442]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+theme_override_styles/panel = SubResource("SB_sep")
+
+[node name="Footer" type="MarginContainer" parent="PanneauPause/VBoxContainer" unique_id=144153196]
+layout_mode = 2
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_bottom = 10
+
+[node name="Conseil" type="Label" parent="PanneauPause/VBoxContainer/Footer" unique_id=2029517908]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.42, 0.62, 0.3, 0.65)
+theme_override_font_sizes/font_size = 10
+text = "Échap  →  reprendre"
+horizontal_alignment = 1
+
+[node name="PanneauParametres" type="PanelContainer" parent="." unique_id=1810473137]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -360.0
+offset_right = 310.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("SB_param_bg")
+
+[node name="Margin" type="MarginContainer" parent="PanneauParametres" unique_id=248681674]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 22
+
+[node name="VBox" type="VBoxContainer" parent="PanneauParametres/Margin" unique_id=433133797]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="HeaderRow" type="HBoxContainer" parent="PanneauParametres/Margin/VBox" unique_id=1333064744]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TitreParam" type="Label" parent="PanneauParametres/Margin/VBox/HeaderRow" unique_id=1853062109]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 1, 0.84, 1)
+theme_override_fonts/font = ExtResource("5_font")
+theme_override_font_sizes/font_size = 22
+text = "Paramètres"
+
+[node name="BtnFermer" type="Button" parent="PanneauParametres/Margin/VBox/HeaderRow" unique_id=466874619]
+custom_minimum_size = Vector2(45, 33)
+layout_mode = 2
+tooltip_text = "Fermer"
+theme_override_colors/font_color = Color(1, 0.72, 0.72, 1)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("SB_fermer_n")
+theme_override_styles/pressed = SubResource("SB_fermer_n")
+theme_override_styles/hover = SubResource("SB_fermer_h")
+text = "✖"
+
+[node name="Sep0" type="HSeparator" parent="PanneauParametres/Margin/VBox" unique_id=874047960]
+layout_mode = 2
+theme_override_styles/separator = SubResource("SB_sep2")
+
+[node name="SectionLangue" type="PanelContainer" parent="PanneauParametres/Margin/VBox" unique_id=1691670594]
+layout_mode = 2
+theme_override_styles/panel = SubResource("SB_section")
+
+[node name="MarginLangue" type="MarginContainer" parent="PanneauParametres/Margin/VBox/SectionLangue" unique_id=91907873]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="ColLangue" type="VBoxContainer" parent="PanneauParametres/Margin/VBox/SectionLangue/MarginLangue" unique_id=35667463]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LabelLangue" type="Label" parent="PanneauParametres/Margin/VBox/SectionLangue/MarginLangue/ColLangue" unique_id=1832545851]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.9, 0.74, 0.8)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 11
+text = "⚑ LANGUE"
+
+[node name="RowLangBtns" type="HBoxContainer" parent="PanneauParametres/Margin/VBox/SectionLangue/MarginLangue/ColLangue" unique_id=478924565]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnFrancais" type="Button" parent="PanneauParametres/Margin/VBox/SectionLangue/MarginLangue/ColLangue/RowLangBtns" unique_id=304372083]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9, 1, 0.94, 1)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("SB_lang_n")
+theme_override_styles/pressed = SubResource("SB_lang_h")
+theme_override_styles/hover = SubResource("SB_lang_h")
+icon = ExtResource("2_france")
+icon_alignment = 1
+
+[node name="BtnMalagasy" type="Button" parent="PanneauParametres/Margin/VBox/SectionLangue/MarginLangue/ColLangue/RowLangBtns" unique_id=1154257595]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9, 1, 0.94, 1)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("SB_lang_n")
+theme_override_styles/pressed = SubResource("SB_lang_h")
+theme_override_styles/hover = SubResource("SB_lang_h")
+icon = ExtResource("3_madagascar")
+icon_alignment = 1
+
+[node name="BtnAnglais" type="Button" parent="PanneauParametres/Margin/VBox/SectionLangue/MarginLangue/ColLangue/RowLangBtns" unique_id=1123871322]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9, 1, 0.94, 1)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("SB_lang_n")
+theme_override_styles/pressed = SubResource("SB_lang_h")
+theme_override_styles/hover = SubResource("SB_lang_h")
+icon = ExtResource("4_uk")
+icon_alignment = 1
+
+[node name="SectionAudio" type="PanelContainer" parent="PanneauParametres/Margin/VBox" unique_id=952910265]
+layout_mode = 2
+theme_override_styles/panel = SubResource("SB_section")
+
+[node name="MarginAudio" type="MarginContainer" parent="PanneauParametres/Margin/VBox/SectionAudio" unique_id=1702882427]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="ColAudio" type="VBoxContainer" parent="PanneauParametres/Margin/VBox/SectionAudio/MarginAudio" unique_id=1361169537]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LabelAudio" type="Label" parent="PanneauParametres/Margin/VBox/SectionAudio/MarginAudio/ColAudio" unique_id=1805793624]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.9, 0.74, 0.8)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 11
+text = "♫ AUDIO"
+
+[node name="RowMus" type="HBoxContainer" parent="PanneauParametres/Margin/VBox/SectionAudio/MarginAudio/ColAudio" unique_id=1288992179]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="LabelMusique" type="Label" parent="PanneauParametres/Margin/VBox/SectionAudio/MarginAudio/ColAudio/RowMus" unique_id=1883636751]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.85, 0.97, 0.89, 1)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 15
+text = "♫ Musique"
+
+[node name="LabelValMusique" type="Label" parent="PanneauParametres/Margin/VBox/SectionAudio/MarginAudio/ColAudio/RowMus" unique_id=1086069773]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.95, 0.7, 1)
+theme_override_font_sizes/font_size = 14
+text = "80%"
+
+[node name="SliderMusique" type="HSlider" parent="PanneauParametres/Margin/VBox/SectionAudio/MarginAudio/ColAudio" unique_id=2004015338]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 0.8
+
+[node name="RowSons" type="HBoxContainer" parent="PanneauParametres/Margin/VBox/SectionAudio/MarginAudio/ColAudio" unique_id=1339095194]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="LabelSons" type="Label" parent="PanneauParametres/Margin/VBox/SectionAudio/MarginAudio/ColAudio/RowSons" unique_id=1065911877]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.85, 0.97, 0.89, 1)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 15
+text = "♭ Effets sonores"
+
+[node name="LabelValSons" type="Label" parent="PanneauParametres/Margin/VBox/SectionAudio/MarginAudio/ColAudio/RowSons" unique_id=926357329]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.95, 0.7, 1)
+theme_override_font_sizes/font_size = 14
+text = "100%"
+
+[node name="SliderSons" type="HSlider" parent="PanneauParametres/Margin/VBox/SectionAudio/MarginAudio/ColAudio" unique_id=511179481]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SectionControles" type="PanelContainer" parent="PanneauParametres/Margin/VBox" unique_id=440535950]
+layout_mode = 2
+theme_override_styles/panel = SubResource("SB_section")
+
+[node name="MarginCtrl" type="MarginContainer" parent="PanneauParametres/Margin/VBox/SectionControles" unique_id=1869705430]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 12
+
+[node name="ColCtrl" type="VBoxContainer" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl" unique_id=1375181640]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LabelCtrl" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl" unique_id=1161499607]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.9, 0.74, 0.8)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 11
+text = "🎮 CONTRÔLES"
+
+[node name="LabelEcoute" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl" unique_id=1338279477]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.92, 0.55, 1)
+theme_override_font_sizes/font_size = 13
+text = "Appuie sur une touche..."
+horizontal_alignment = 1
+
+[node name="HeaderCtrl" type="HBoxContainer" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl" unique_id=1163491128]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LabelAction" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/HeaderCtrl" unique_id=38926080]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.6, 0.8, 0.68, 0.6)
+theme_override_font_sizes/font_size = 11
+text = "Action"
+
+[node name="LabelTouche" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/HeaderCtrl" unique_id=2031141047]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.8, 0.68, 0.6)
+theme_override_font_sizes/font_size = 11
+text = "Touche"
+horizontal_alignment = 1
+
+[node name="SepCtrl" type="HSeparator" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl" unique_id=1805995128]
+layout_mode = 2
+theme_override_styles/separator = SubResource("SB_sep")
+
+[node name="RowHaut" type="HBoxContainer" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl" unique_id=1294890487]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="IcoHaut" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowHaut" unique_id=834871726]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 1, 0.92, 1)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 16
+text = "⬆"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NomHaut" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowHaut" unique_id=389638055]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.88, 1, 0.92, 1)
+theme_override_font_sizes/font_size = 14
+text = "Haut"
+vertical_alignment = 1
+
+[node name="BtnHaut" type="Button" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowHaut" unique_id=540842202]
+custom_minimum_size = Vector2(60, 32)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.95, 0.72, 1)
+theme_override_fonts/font = ExtResource("5_font")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("SB_ctrl_n")
+theme_override_styles/pressed = SubResource("SB_ctrl_n")
+theme_override_styles/hover = SubResource("SB_ctrl_h")
+text = "?"
+
+[node name="RowBas" type="HBoxContainer" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl" unique_id=958465180]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="IcoBas" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowBas" unique_id=1895760095]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 1, 0.92, 1)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 16
+text = "⬇"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NomBas" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowBas" unique_id=481565462]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.88, 1, 0.92, 1)
+theme_override_font_sizes/font_size = 14
+text = "Bas"
+vertical_alignment = 1
+
+[node name="BtnBas" type="Button" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowBas" unique_id=1815340689]
+custom_minimum_size = Vector2(60, 32)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.95, 0.72, 1)
+theme_override_fonts/font = ExtResource("5_font")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("SB_ctrl_n")
+theme_override_styles/pressed = SubResource("SB_ctrl_n")
+theme_override_styles/hover = SubResource("SB_ctrl_h")
+text = "?"
+
+[node name="RowGauche" type="HBoxContainer" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl" unique_id=1303363196]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="IcoGauche" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowGauche" unique_id=1741878541]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 1, 0.92, 1)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 16
+text = "⬅"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NomGauche" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowGauche" unique_id=1856917450]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.88, 1, 0.92, 1)
+theme_override_font_sizes/font_size = 14
+text = "Gauche"
+vertical_alignment = 1
+
+[node name="BtnGauche" type="Button" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowGauche" unique_id=1875370889]
+custom_minimum_size = Vector2(60, 32)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.95, 0.72, 1)
+theme_override_fonts/font = ExtResource("5_font")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("SB_ctrl_n")
+theme_override_styles/pressed = SubResource("SB_ctrl_n")
+theme_override_styles/hover = SubResource("SB_ctrl_h")
+text = "?"
+
+[node name="RowDroite" type="HBoxContainer" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl" unique_id=247663479]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="IcoDroite" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowDroite" unique_id=1953544802]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 1, 0.92, 1)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 16
+text = "➡"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NomDroite" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowDroite" unique_id=356989955]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.88, 1, 0.92, 1)
+theme_override_font_sizes/font_size = 14
+text = "Droite"
+vertical_alignment = 1
+
+[node name="BtnDroite" type="Button" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowDroite" unique_id=1734865682]
+custom_minimum_size = Vector2(60, 32)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.95, 0.72, 1)
+theme_override_fonts/font = ExtResource("5_font")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("SB_ctrl_n")
+theme_override_styles/pressed = SubResource("SB_ctrl_n")
+theme_override_styles/hover = SubResource("SB_ctrl_h")
+text = "?"
+
+[node name="RowInteragir" type="HBoxContainer" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl" unique_id=596196888]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="IcoInteragir" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowInteragir" unique_id=401019892]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 1, 0.92, 1)
+theme_override_fonts/font = ExtResource("6_emoji")
+theme_override_font_sizes/font_size = 16
+text = "💬"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NomInteragir" type="Label" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowInteragir" unique_id=2132063121]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.88, 1, 0.92, 1)
+theme_override_font_sizes/font_size = 14
+text = "Interagir"
+vertical_alignment = 1
+
+[node name="BtnInteragir" type="Button" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowInteragir" unique_id=24940391]
+custom_minimum_size = Vector2(60, 32)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.95, 0.72, 1)
+theme_override_fonts/font = ExtResource("5_font")
+theme_override_font_sizes/font_size = 13
+theme_override_styles/normal = SubResource("SB_ctrl_n")
+theme_override_styles/pressed = SubResource("SB_ctrl_n")
+theme_override_styles/hover = SubResource("SB_ctrl_h")
+text = "?"
+
+[node name="SepActions" type="HSeparator" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl" unique_id=1104174424]
+layout_mode = 2
+theme_override_styles/separator = SubResource("SB_sep")
+
+[node name="RowActions" type="HBoxContainer" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl" unique_id=1623495526]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnParDefaut" type="Button" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowActions" unique_id=1402468402]
+custom_minimum_size = Vector2(0, 34)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 0.9, 1, 1)
+theme_override_colors/font_hover_color = Color(0.9, 1, 1, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("SB_reset_n")
+theme_override_styles/pressed = SubResource("SB_reset_n")
+theme_override_styles/hover = SubResource("SB_reset_h")
+theme_override_styles/disabled = SubResource("SB_reset_n")
+theme_override_styles/focus = SubResource("SB_reset_h")
+text = "↺  Par défaut"
+
+[node name="BtnEnregistrer" type="Button" parent="PanneauParametres/Margin/VBox/SectionControles/MarginCtrl/ColCtrl/RowActions" unique_id=482416634]
+custom_minimum_size = Vector2(0, 34)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.75, 1, 0.8, 1)
+theme_override_colors/font_hover_color = Color(0.9, 1, 0.88, 1)
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("SB_save_n")
+theme_override_styles/pressed = SubResource("SB_save_n")
+theme_override_styles/hover = SubResource("SB_save_h")
+theme_override_styles/disabled = SubResource("SB_save_n")
+theme_override_styles/focus = SubResource("SB_save_h")
+text = "💾  Enregistrer"

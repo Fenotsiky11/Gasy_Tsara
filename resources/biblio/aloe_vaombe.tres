@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dd1lvxhj6m0x6"]
+
+[ext_resource type="Texture2D" uid="uid://di5p2lfumfbxy" path="res://resources/biblio/orange.tres" id="1_1jnx1"]
+[ext_resource type="Script" uid="uid://ecdj2t4ekgc7" path="res://scripts/gameplay/item_data.gd" id="1_ffeo0"]
+
+[resource]
+script = ExtResource("1_ffeo0")
+id = &"Aloe Vaombe"
+nom_affiche = "Aloe Vaombe"
+type = 4
+description = "Une plante grasse typique du Grand Sud de Madagascar. Elle forme une rosette de feuilles charnues et produit de grandes grappes de fleurs rouges ou oranges. Elle survit parfaitement dans les zones très sèches et arides."
+icone = ExtResource("1_1jnx1")
+metadata/_custom_type_script = "uid://ecdj2t4ekgc7"

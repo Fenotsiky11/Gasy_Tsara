@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bk78udtive653"]
+
+[ext_resource type="Texture2D" uid="uid://cciwdyw0wom8n" path="res://resources/biblio/icon_jaune.tres" id="1_ut8q6"]
+[ext_resource type="Script" uid="uid://ecdj2t4ekgc7" path="res://scripts/gameplay/item_data.gd" id="2_h0xlj"]
+
+[resource]
+script = ExtResource("2_h0xlj")
+id = &"satrokala"
+nom_affiche = "satrokala"
+type = 4
+description = "Un arbre endémique majestueux qui perd ses feuilles pour laisser place à une explosion de fleurs tubulaires. Sa couleur vive illumine les paysages de la région d'Analamanga. On utilise souvent ses fibres pour l'artisanat local."
+icone = ExtResource("1_ut8q6")
+metadata/_custom_type_script = "uid://ecdj2t4ekgc7"
