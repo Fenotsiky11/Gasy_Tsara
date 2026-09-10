@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhsjs2ls0ua2w"]
+[gd_scene format=3 uid="uid://be5lqj7j3x3dp"]
 
 [ext_resource type="Script" path="res://gardien.gd" id="1_gardien"]
 [ext_resource type="SpriteFrames" path="res://gardien_frames.tres" id="2_frames"]

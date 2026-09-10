@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dq2nwwfupg1ga"]
+[gd_scene format=3 uid="uid://bq8sv74loatk8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_porte"]
 size = Vector2(120, 140)

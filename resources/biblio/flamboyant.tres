@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bcvvsvsesglqw"]
+[gd_resource type="Resource" script_class="ItemDataMadagascar" format=3 uid="uid://bcvvsvsesglqw"]
 
 [ext_resource type="Script" uid="uid://ecdj2t4ekgc7" path="res://scripts/gameplay/item_data.gd" id="1_3a65r"]
 [ext_resource type="Texture2D" uid="uid://dverwwmmqcxw2" path="res://resources/biblio/sans_fruit.tres" id="1_qdkbl"]

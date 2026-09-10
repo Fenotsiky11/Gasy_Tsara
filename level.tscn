@@ -1,46 +1,46 @@
-[gd_scene format=4 uid="uid://6iws3cmkipox"]
+[gd_scene format=4 uid="uid://e74oljwco0v7"]
 
-[ext_resource type="Script" uid="uid://bu3m3m4kv1s1w" path="res://level.gd" id="1_fedht"]
-[ext_resource type="Texture2D" uid="uid://cpsubjmybub6i" path="res://asset/fsm_Castle01_A2.png" id="1_oi3di"]
-[ext_resource type="Texture2D" uid="uid://cwo25hqpobal" path="res://asset/fsm_Town01_B1.png" id="2_0b4ue"]
-[ext_resource type="Texture2D" uid="uid://bh1ofy3nryqkq" path="res://asset/fsm_Town01_B.png" id="3_f2txt"]
-[ext_resource type="Script" uid="uid://5jyvl3yoxk8o" path="res://player.gd" id="4_1ainy"]
-[ext_resource type="Texture2D" uid="uid://lroa46feq87s" path="res://asset/$masc.png" id="5_n6hdu"]
-[ext_resource type="Texture2D" uid="uid://bnhr3w7xxd1m3" path="res://asset/porte.png" id="5_sl4om"]
-[ext_resource type="Shader" uid="uid://600hpquu62nn" path="res://level.gdshader" id="6_1ainy"]
-[ext_resource type="Texture2D" uid="uid://qwivvr5g60bl" path="res://asset/Gemini_Generated_Image_85nam485nam485na__1_-removebg-preview.png" id="6_42xju"]
-[ext_resource type="Script" uid="uid://ctbje36v0riqp" path="res://background_2.gd" id="6_ait7k"]
-[ext_resource type="Script" uid="uid://cjgykbyfje4ek" path="res://inventaire_menu.gd" id="7_8b0r0"]
+[ext_resource type="Script" uid="uid://bu3m3m4kv1s1w" path="res://scripts/gameplay/level.gd" id="1_fedht"]
+[ext_resource type="Texture2D" uid="uid://cpsubjmybub6i" path="res://assets/sprites/fsm_Castle01_A2.png" id="1_oi3di"]
+[ext_resource type="Texture2D" uid="uid://cwo25hqpobal" path="res://assets/sprites/fsm_Town01_B1.png" id="2_0b4ue"]
+[ext_resource type="Texture2D" uid="uid://bh1ofy3nryqkq" path="res://assets/sprites/fsm_Town01_B.png" id="3_f2txt"]
+[ext_resource type="Script" uid="uid://5jyvl3yoxk8o" path="res://scripts/gameplay/player.gd" id="4_1ainy"]
+[ext_resource type="Texture2D" uid="uid://lroa46feq87s" path="res://assets/sprites/$masc.png" id="5_n6hdu"]
+[ext_resource type="Texture2D" uid="uid://bnhr3w7xxd1m3" path="res://assets/sprites/porte.png" id="5_sl4om"]
+[ext_resource type="Shader" uid="uid://600hpquu62nn" path="res://shaders/level.gdshader" id="6_1ainy"]
+[ext_resource type="Texture2D" uid="uid://qwivvr5g60bl" path="res://assets/sprites/Gemini_Generated_Image_85nam485nam485na__1_-removebg-preview.png" id="6_42xju"]
+[ext_resource type="Script" uid="uid://ctbje36v0riqp" path="res://scripts/gameplay/background_2.gd" id="6_ait7k"]
+[ext_resource type="Script" uid="uid://cjgykbyfje4ek" path="res://scripts/ui/inventaire_menu.gd" id="7_8b0r0"]
 [ext_resource type="Script" uid="uid://dpvns62lrexjw" path="res://area_2d.gd" id="7_42xju"]
-[ext_resource type="Texture2D" uid="uid://c48xmkovpjrpe" path="res://asset/Gemini_Generated_Image_z87qogz87qogz87q-removebg-preview.png" id="7_ilwjd"]
-[ext_resource type="Script" uid="uid://dv2j4eldpdttq" path="res://Script/fleur.gd" id="7_n6hdu"]
-[ext_resource type="Resource" uid="uid://bk78udtive653" path="res://biblio/Satrokala.tres" id="8_aicyk"]
-[ext_resource type="Script" uid="uid://bd5imaoxkf2re" path="res://collision_shape_2d.gd" id="8_v7sqt"]
-[ext_resource type="Texture2D" uid="uid://cjimei86gk37t" path="res://asset/Gemini_Generated_Image_z87qogz87qogz87q.png" id="8_y3bce"]
-[ext_resource type="Resource" uid="uid://dl7ung1o6ecxa" path="res://biblio/manguier_sauvage.tres" id="9_8b0r0"]
-[ext_resource type="Texture2D" uid="uid://0q632juoky2q" path="res://asset/chair.png" id="9_fj6e6"]
-[ext_resource type="Script" uid="uid://q568irfbdcka" path="res://popup_fleur.gd" id="9_v5j5c"]
-[ext_resource type="Texture2D" uid="uid://bjuixdn0s82h5" path="res://asset/jiro_chair.png" id="10_2h3vt"]
-[ext_resource type="Texture2D" uid="uid://dcf6j8tdarpmi" path="res://asset/200.png" id="10_fj6e6"]
-[ext_resource type="Resource" uid="uid://ccjksl2dhpjsi" path="res://biblio/angraecum.tres" id="10_h6smj"]
-[ext_resource type="Texture2D" uid="uid://deykjqv2ovjn8" path="res://asset/Capture_d_#U00e9cran_du_2026-05-27_20-05-39-removebg-preview.png" id="10_u3yai"]
-[ext_resource type="Texture2D" uid="uid://dr2rkttlcmfdy" path="res://asset/balancoir.png" id="11_aoqsc"]
-[ext_resource type="Texture2D" uid="uid://dctv8dbwkkla6" path="res://asset/Gemini_Generated_Image_z87qogz87qogz87q-picsay (4).png" id="11_hvubb"]
-[ext_resource type="Resource" uid="uid://bcvvsvsesglqw" path="res://biblio/flamboyant.tres" id="11_v5j5c"]
-[ext_resource type="Resource" uid="uid://dd1lvxhj6m0x6" path="res://biblio/aloe_vaombe.tres" id="12_5pxul"]
-[ext_resource type="Texture2D" uid="uid://bic3ewksq1vpd" path="res://asset/clo_vertical.png" id="12_aoqsc"]
-[ext_resource type="Texture2D" uid="uid://dujh75dat3xkv" path="res://asset/tohatra.png" id="12_mleqk"]
-[ext_resource type="Texture2D" uid="uid://beks74ch2rhbw" path="res://asset/door.png" id="14_dtg4e"]
-[ext_resource type="Texture2D" uid="uid://ccb4v6soi6q4e" path="res://asset/Gemini_Generated_Image_t8iibdt8iibdt8ii.png" id="19_0mnfp"]
-[ext_resource type="Texture2D" uid="uid://cljlqnl082pge" path="res://asset/Gemini_Generated_Image_xl9rthxl9rthxl9r.png" id="19_ut2i6"]
-[ext_resource type="Texture2D" uid="uid://tvonn8hc73tk" path="res://asset/KAY.png" id="20_0mnfp"]
+[ext_resource type="Texture2D" uid="uid://c48xmkovpjrpe" path="res://assets/sprites/Gemini_Generated_Image_z87qogz87qogz87q-removebg-preview.png" id="7_ilwjd"]
+[ext_resource type="Script" uid="uid://dv2j4eldpdttq" path="res://scripts/gameplay/fleur.gd" id="7_n6hdu"]
+[ext_resource type="Resource" uid="uid://bk78udtive653" path="res://resources/biblio/Satrokala.tres" id="8_aicyk"]
+[ext_resource type="Script" uid="uid://bd5imaoxkf2re" path="res://scripts/gameplay/collision_shape_2d.gd" id="8_v7sqt"]
+[ext_resource type="Texture2D" uid="uid://cjimei86gk37t" path="res://assets/sprites/Gemini_Generated_Image_z87qogz87qogz87q.png" id="8_y3bce"]
+[ext_resource type="Resource" uid="uid://dl7ung1o6ecxa" path="res://resources/biblio/manguier_sauvage.tres" id="9_8b0r0"]
+[ext_resource type="Texture2D" uid="uid://0q632juoky2q" path="res://assets/sprites/chair.png" id="9_fj6e6"]
+[ext_resource type="Script" uid="uid://q568irfbdcka" path="res://scripts/gameplay/popup_fleur.gd" id="9_v5j5c"]
+[ext_resource type="Texture2D" uid="uid://bjuixdn0s82h5" path="res://assets/sprites/jiro_chair.png" id="10_2h3vt"]
+[ext_resource type="Texture2D" uid="uid://dcf6j8tdarpmi" path="res://assets/sprites/200.png" id="10_fj6e6"]
+[ext_resource type="Resource" uid="uid://ccjksl2dhpjsi" path="res://resources/biblio/angraecum.tres" id="10_h6smj"]
+[ext_resource type="Texture2D" uid="uid://deykjqv2ovjn8" path="res://assets/sprites/Capture_d_#U00e9cran_du_2026-05-27_20-05-39-removebg-preview.png" id="10_u3yai"]
+[ext_resource type="Texture2D" uid="uid://dr2rkttlcmfdy" path="res://assets/sprites/balancoir.png" id="11_aoqsc"]
+[ext_resource type="Texture2D" uid="uid://dctv8dbwkkla6" path="res://assets/sprites/Gemini_Generated_Image_z87qogz87qogz87q-picsay (4).png" id="11_hvubb"]
+[ext_resource type="Resource" uid="uid://bcvvsvsesglqw" path="res://resources/biblio/flamboyant.tres" id="11_v5j5c"]
+[ext_resource type="Resource" uid="uid://dd1lvxhj6m0x6" path="res://resources/biblio/aloe_vaombe.tres" id="12_5pxul"]
+[ext_resource type="Texture2D" uid="uid://bic3ewksq1vpd" path="res://assets/sprites/clo_vertical.png" id="12_aoqsc"]
+[ext_resource type="Texture2D" uid="uid://dujh75dat3xkv" path="res://assets/sprites/tohatra.png" id="12_mleqk"]
+[ext_resource type="Texture2D" uid="uid://beks74ch2rhbw" path="res://assets/sprites/door.png" id="14_dtg4e"]
+[ext_resource type="Texture2D" uid="uid://ccb4v6soi6q4e" path="res://assets/sprites/Gemini_Generated_Image_t8iibdt8iibdt8ii.png" id="19_0mnfp"]
+[ext_resource type="Texture2D" uid="uid://cljlqnl082pge" path="res://assets/sprites/Gemini_Generated_Image_xl9rthxl9rthxl9r.png" id="19_ut2i6"]
+[ext_resource type="Texture2D" uid="uid://tvonn8hc73tk" path="res://assets/sprites/KAY.png" id="20_0mnfp"]
 [ext_resource type="AudioStream" uid="uid://dsd8lrqatu6hl" path="res://audio/Apple Cider.mp3" id="30_mleqk"]
 [ext_resource type="PackedScene" path="res://menu_contrles.tscn" id="31_mc"]
 [ext_resource type="PackedScene" path="res://pause_menu.tscn" id="37_uuqa8"]
 [ext_resource type="PackedScene" path="res://hud_profil.tscn" id="40_hudpf"]
 [ext_resource type="PackedScene" path="res://minimap.tscn" id="41_minimp"]
 [ext_resource type="PackedScene" path="res://dialogue_box.tscn" id="50_dlgbox"]
-[ext_resource type="PackedScene" uid="uid://bhsjs2ls0ua2w" path="res://gardien.tscn" id="51_gardien"]
+[ext_resource type="PackedScene" uid="uid://bhsjs2ls0ua2w" path="res://scenes/gameplay/gardien.tscn" id="51_gardien"]
 [ext_resource type="PackedScene" path="res://maison_gardien.tscn" id="53_maison"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ainy"]
@@ -31563,7 +31563,7 @@ script = ExtResource("8_v7sqt")
 [node name="Label" type="Label" parent="map/Area2D/PopupPanel" unique_id=1621636059]
 offset_left = 4.0
 offset_top = 4.0
-offset_right = 96.0
+offset_right = 158.0
 offset_bottom = 96.0
 text = "Statut Mafinaritra b"
 
@@ -31667,6 +31667,7 @@ grow_vertical = 2
 
 [node name="PopupFleur" type="Panel" parent="CanvasLayer" unique_id=387804256]
 process_mode = 3
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -31881,6 +31882,7 @@ stream = ExtResource("30_mleqk")
 autoplay = true
 
 [node name="PauseMenu" parent="." unique_id=1168504429 instance=ExtResource("37_uuqa8")]
+visible = false
 
 [node name="BtnAnglais" parent="PauseMenu/PanneauParametres/Margin/VBox/SectionLangue/MarginLangue/ColLangue/RowLangBtns" index="2"]
 icon = null
@@ -31899,7 +31901,6 @@ position = Vector2(-93, 922)
 [connection signal="body_entered" from="map/Area2D" to="map/Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="map/Area2D" to="map/Area2D" method="_on_body_exited"]
 [connection signal="item_selected" from="CanvasLayer/InventaireMenu/ListeItems" to="player" method="_on_liste_items_item_selected"]
-[connection signal="pressed" from="CanvasLayer/PopupFleur/BoutonFerme" to="CanvasLayer/PopupFleur" method="_on_bouton_ferme_pressed"]
 
 [editable path="PauseMenu"]
 [editable path="DialogueBox"]

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dd1lvxhj6m0x6"]
+[gd_resource type="Resource" script_class="ItemDataMadagascar" format=3 uid="uid://dd1lvxhj6m0x6"]
 
 [ext_resource type="Texture2D" uid="uid://di5p2lfumfbxy" path="res://resources/biblio/orange.tres" id="1_1jnx1"]
 [ext_resource type="Script" uid="uid://ecdj2t4ekgc7" path="res://scripts/gameplay/item_data.gd" id="1_ffeo0"]
